@@ -1,0 +1,12 @@
+﻿1>------ Build started: Project: LogicLayer, Configuration: Debug Any CPU ------
+1>  LogicLayer -> C:\Users\Felipe Alvarez\source\repos\FrutosElqui2.0\LogicLayer\bin\Debug\LogicLayer.dll
+2>------ Build started: Project: UILayer, Configuration: Debug Any CPU ------
+2>  UILayer -> C:\Users\Felipe Alvarez\source\repos\FrutosElqui2.0\UILayer\bin\Debug\UILayer.exe
+Building UILayer...
+3>------ Publish started: Project: UILayer, Configuration: Debug Any CPU ------
+Connecting to 'C:\Users\Felipe Alvarez\Desktop\Proyectos C#\Antusin\Codigos y Libros\'...
+Publishing files...
+Publish success.
+C:\Users\Felipe Alvarez\Desktop\Proyectos C#\Antusin\Codigos y Libros\
+========== Build: 2 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
+========== Publish: 1 succeeded, 0 failed, 0 skipped ==========

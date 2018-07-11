@@ -1,0 +1,374 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D7D6B83D-AF08-4346-9B17-C4B78DFA8B46}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>UILayer</RootNamespace>
+    <AssemblyName>UILayer</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Falva\Desktop\Frutos de Elqui\Release Mayo v1.2\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <TargetCulture>es-CL</TargetCulture>
+    <ProductName>Frutos de Elqui</ProductName>
+    <PublisherName>Felipe Alvarez</PublisherName>
+    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationVersion>5.4.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>84DD74AD1488A8C82629F0A45AD10E3626E48B6C</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>UILayer_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>frutoselqui.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.1.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
+      <HintPath>..\packages\Portable.BouncyCastle.1.8.1.3\lib\net40\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging, Version=3.4.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Common.Logging.3.4.1\lib\net40\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging.Core, Version=3.4.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Common.Logging.Core.3.4.1\lib\net40\Common.Logging.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="itext.barcodes, Version=7.1.2.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext7.7.1.2\lib\net40\itext.barcodes.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.forms, Version=7.1.2.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext7.7.1.2\lib\net40\itext.forms.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.io, Version=7.1.2.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext7.7.1.2\lib\net40\itext.io.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.kernel, Version=7.1.2.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext7.7.1.2\lib\net40\itext.kernel.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.layout, Version=7.1.2.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext7.7.1.2\lib\net40\itext.layout.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.pdfa, Version=7.1.2.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext7.7.1.2\lib\net40\itext.pdfa.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.sign, Version=7.1.2.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext7.7.1.2\lib\net40\itext.sign.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.styledxmlparser, Version=7.1.2.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext7.7.1.2\lib\net40\itext.styledxmlparser.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.svg, Version=7.1.2.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext7.7.1.2\lib\net40\itext.svg.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminUI.Designer.cs">
+      <DependentUpon>AdminUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarProducto.Designer.cs">
+      <DependentUpon>AgregarProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarStock.Designer.cs">
+      <DependentUpon>AgregarStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConnectionFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConnectionFrame.Designer.cs">
+      <DependentUpon>ConnectionFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlModuloscs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlModuloscs.Designer.cs">
+      <DependentUpon>ControlModuloscs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CrearOferta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrearOferta.Designer.cs">
+      <DependentUpon>CrearOferta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DetalleVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetalleVenta.Designer.cs">
+      <DependentUpon>DetalleVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Egreso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Egreso.Designer.cs">
+      <DependentUpon>Egreso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InformeVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InformeVentas.Designer.cs">
+      <DependentUpon>InformeVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InformeVentasReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InformeVentasReportes.Designer.cs">
+      <DependentUpon>InformeVentasReportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IngresoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IngresoForm.Designer.cs">
+      <DependentUpon>IngresoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarOfertas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarOfertas.Designer.cs">
+      <DependentUpon>ModificarOfertas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarProducto.Designer.cs">
+      <DependentUpon>ModificarProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloInformesVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloInformesVentas.Designer.cs">
+      <DependentUpon>ModuloInformesVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NuevoUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuevoUsuario.Designer.cs">
+      <DependentUpon>NuevoUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OfertasPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OfertasPanel.Designer.cs">
+      <DependentUpon>OfertasPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReporteProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteProductos.Designer.cs">
+      <DependentUpon>ReporteProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteUsuarios.Designer.cs">
+      <DependentUpon>ReporteUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VentaUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentaUI.Designer.cs">
+      <DependentUpon>VentaUI.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AdminUI.resx">
+      <DependentUpon>AdminUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarProducto.resx">
+      <DependentUpon>AgregarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarStock.resx">
+      <DependentUpon>AgregarStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConnectionFrame.resx">
+      <DependentUpon>ConnectionFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlModuloscs.resx">
+      <DependentUpon>ControlModuloscs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrearOferta.resx">
+      <DependentUpon>CrearOferta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DetalleVenta.resx">
+      <DependentUpon>DetalleVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Egreso.resx">
+      <DependentUpon>Egreso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InformeVentas.resx">
+      <DependentUpon>InformeVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InformeVentasReportes.resx">
+      <DependentUpon>InformeVentasReportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IngresoForm.resx">
+      <DependentUpon>IngresoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarOfertas.resx">
+      <DependentUpon>ModificarOfertas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarProducto.resx">
+      <DependentUpon>ModificarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloInformesVentas.resx">
+      <DependentUpon>ModuloInformesVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuevoUsuario.resx">
+      <DependentUpon>NuevoUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OfertasPanel.resx">
+      <DependentUpon>OfertasPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ReporteProductos.resx">
+      <DependentUpon>ReporteProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteUsuarios.resx">
+      <DependentUpon>ReporteUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentaUI.resx">
+      <DependentUpon>VentaUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="UILayer_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo Frutos Elqui.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shopping-Basket-03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bid-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Data-Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inventario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Reporte01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Reporte02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LogicLayer\LogicLayer.csproj">
+      <Project>{33802379-2A27-463A-A828-CE7737AD2FFA}</Project>
+      <Name>LogicLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="frutoselqui.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
