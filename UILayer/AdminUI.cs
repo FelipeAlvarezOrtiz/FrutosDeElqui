@@ -37,7 +37,7 @@ namespace UILayer
 
         private void CloseSessionButton_Click(object sender, EventArgs e) => Close();
 
-        private void ClickEgresoEvent(object sender, EventArgs e) => new Egreso(_user.Rut).Show();
+        private void ClickEgresoEvent(object sender, EventArgs e) => new Egreso(_user.Rut,userPlace.Text).Show();
 
         private void ProductoEvent(object sender, EventArgs e)
         {
@@ -81,7 +81,7 @@ namespace UILayer
 
         private void IngresoClick(object sender, EventArgs e)
         {
-            new IngresoForm(_user.Rut).Show();
+            new IngresoForm(_user.Rut,userPlace.Text).Show();
         }
 
         private void ModifyOfertasClick(object sender, EventArgs e)

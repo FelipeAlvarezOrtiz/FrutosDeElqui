@@ -8,9 +8,11 @@ namespace UILayer
     public partial class IngresoForm : Form
     {
         private readonly int rut;
-        public IngresoForm(int _rut)
+        private readonly string nombre;
+        public IngresoForm(int _rut,string Nombre)
         {
             rut = _rut;
+            nombre = Nombre;
             InitializeComponent();
         }
 
@@ -26,6 +28,7 @@ namespace UILayer
                     var hora = DateTime.Now.ToString("H:mm:ss");
                     Conexion.Instance.SetIngreso(idMov, salida, rut, fecha, hora, motivoTextBox.Text);
                     MessageBox.Show(this, "Ingreso de Dinero ingresado con Exito", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    new ReportManager().ImprimirEgreso(rut, salida, motivoTextBox.Text, nombre);
                     this.Close();
                 }
                 else

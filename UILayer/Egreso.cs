@@ -8,10 +8,12 @@ namespace UILayer
     {
         private bool _clickeado = false;
         private int _rutAutorizante;
-        public Egreso(int rut)
+        private readonly string _nombre;
+        public Egreso(int rut,string Nombre)
         {
             InitializeComponent();
             _rutAutorizante = rut;
+            _nombre = Nombre;
         }
 
         private void CambioTextoEvent(object sender, EventArgs e)
@@ -43,6 +45,7 @@ namespace UILayer
                 if (Conexion.Instance.SetEgreso(idMov,salida, _rutAutorizante, fecha, hora,razonTextBox.Text))
                 {
                     MessageBox.Show(this, "Egreso ingresado con Exito", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    new ReportManager().ImprimirEgreso(_rutAutorizante, salida, razonTextBox.Text, _nombre);
                     this.Close();
                 }
             }
@@ -51,11 +54,6 @@ namespace UILayer
                 MessageBox.Show(this, "El monto a egresar debe ser númerico y la razón no puede estar vacía", "Error",
                     MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-        }
-        //Imprimir Nombre de quien egreso, Motivo, Cantidad, Fecha y Hora
-        private void GenerarPDFEgreso()
-        {
-
         }
     }
 }

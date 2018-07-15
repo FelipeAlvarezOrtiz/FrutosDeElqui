@@ -71,5 +71,14 @@ namespace UILayer
             }
         }
 
+        private void cancelar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            new ReportManager().ImprimirEgreso(123, 23, "asd", "asdsa");
+        }
     }
 }
