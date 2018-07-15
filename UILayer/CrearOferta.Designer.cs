@@ -30,14 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CrearOferta));
             this.especGroupBox = new System.Windows.Forms.GroupBox();
-            this.productosGroupBox = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.NameBox = new System.Windows.Forms.TextBox();
-            this.PriceBox = new System.Windows.Forms.TextBox();
-            this.CodeBox = new System.Windows.Forms.TextBox();
             this.CheckDispoButton = new System.Windows.Forms.Button();
+            this.CodeBox = new System.Windows.Forms.TextBox();
+            this.PriceBox = new System.Windows.Forms.TextBox();
+            this.NameBox = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.productosGroupBox = new System.Windows.Forms.GroupBox();
             this.productosGridView = new System.Windows.Forms.DataGridView();
             this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -64,33 +64,36 @@
             this.especGroupBox.TabStop = false;
             this.especGroupBox.Text = "Especificaciones de la Oferta";
             // 
-            // productosGroupBox
+            // CheckDispoButton
             // 
-            this.productosGroupBox.Controls.Add(this.productosGridView);
-            this.productosGroupBox.Location = new System.Drawing.Point(12, 147);
-            this.productosGroupBox.Name = "productosGroupBox";
-            this.productosGroupBox.Size = new System.Drawing.Size(739, 367);
-            this.productosGroupBox.TabIndex = 1;
-            this.productosGroupBox.TabStop = false;
-            this.productosGroupBox.Text = "Productos Asociados";
+            this.CheckDispoButton.Location = new System.Drawing.Point(529, 77);
+            this.CheckDispoButton.Name = "CheckDispoButton";
+            this.CheckDispoButton.Size = new System.Drawing.Size(169, 32);
+            this.CheckDispoButton.TabIndex = 6;
+            this.CheckDispoButton.Text = "Verificar Disponibilidad";
+            this.CheckDispoButton.UseVisualStyleBackColor = true;
+            this.CheckDispoButton.Click += new System.EventHandler(this.CheckEvent);
             // 
-            // label1
+            // CodeBox
             // 
-            this.label1.Location = new System.Drawing.Point(7, 35);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(138, 23);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nombre de Oferta :";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.CodeBox.Location = new System.Drawing.Point(517, 35);
+            this.CodeBox.Name = "CodeBox";
+            this.CodeBox.Size = new System.Drawing.Size(197, 22);
+            this.CodeBox.TabIndex = 5;
             // 
-            // label2
+            // PriceBox
             // 
-            this.label2.Location = new System.Drawing.Point(7, 82);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(138, 23);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Precio :";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.PriceBox.Location = new System.Drawing.Point(151, 82);
+            this.PriceBox.Name = "PriceBox";
+            this.PriceBox.Size = new System.Drawing.Size(216, 22);
+            this.PriceBox.TabIndex = 4;
+            // 
+            // NameBox
+            // 
+            this.NameBox.Location = new System.Drawing.Point(151, 35);
+            this.NameBox.Name = "NameBox";
+            this.NameBox.Size = new System.Drawing.Size(216, 22);
+            this.NameBox.TabIndex = 3;
             // 
             // label3
             // 
@@ -101,36 +104,33 @@
             this.label3.Text = "Codigo de Oferta";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // NameBox
+            // label2
             // 
-            this.NameBox.Location = new System.Drawing.Point(151, 35);
-            this.NameBox.Name = "NameBox";
-            this.NameBox.Size = new System.Drawing.Size(216, 22);
-            this.NameBox.TabIndex = 3;
+            this.label2.Location = new System.Drawing.Point(7, 82);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(138, 23);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Precio :";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // PriceBox
+            // label1
             // 
-            this.PriceBox.Location = new System.Drawing.Point(151, 82);
-            this.PriceBox.Name = "PriceBox";
-            this.PriceBox.Size = new System.Drawing.Size(216, 22);
-            this.PriceBox.TabIndex = 4;
+            this.label1.Location = new System.Drawing.Point(7, 35);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(138, 23);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Nombre de Oferta :";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // CodeBox
+            // productosGroupBox
             // 
-            this.CodeBox.Location = new System.Drawing.Point(517, 35);
-            this.CodeBox.Name = "CodeBox";
-            this.CodeBox.Size = new System.Drawing.Size(197, 22);
-            this.CodeBox.TabIndex = 5;
-            // 
-            // CheckDispoButton
-            // 
-            this.CheckDispoButton.Location = new System.Drawing.Point(529, 77);
-            this.CheckDispoButton.Name = "CheckDispoButton";
-            this.CheckDispoButton.Size = new System.Drawing.Size(169, 32);
-            this.CheckDispoButton.TabIndex = 6;
-            this.CheckDispoButton.Text = "Verificar Disponibilidad";
-            this.CheckDispoButton.UseVisualStyleBackColor = true;
-            this.CheckDispoButton.Click += new System.EventHandler(this.CheckEvent);
+            this.productosGroupBox.Controls.Add(this.productosGridView);
+            this.productosGroupBox.Location = new System.Drawing.Point(12, 147);
+            this.productosGroupBox.Name = "productosGroupBox";
+            this.productosGroupBox.Size = new System.Drawing.Size(739, 367);
+            this.productosGroupBox.TabIndex = 1;
+            this.productosGroupBox.TabStop = false;
+            this.productosGroupBox.Text = "Productos Asociados";
             // 
             // productosGridView
             // 
@@ -177,6 +177,7 @@
             this.cancelar.TabIndex = 3;
             this.cancelar.Text = "Cancelar";
             this.cancelar.UseVisualStyleBackColor = true;
+            this.cancelar.Click += new System.EventHandler(this.cancelar_Click);
             // 
             // CrearOferta
             // 

@@ -182,7 +182,7 @@
             this.MinimumSize = new System.Drawing.Size(813, 745);
             this.Name = "ModificarOfertas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ModificarOfertas";
+            this.Text = "Modificar Ofertas";
             this.Load += new System.EventHandler(this.cargandoForm);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
